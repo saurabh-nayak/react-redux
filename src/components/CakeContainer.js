@@ -1,13 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { buyCake , refundCake} from '../redux/cake/cakeActions'
-
+import bootstrap from '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 function CakeContainer (props) {
   return (
     <div>
       <h2>Number of cakes - {props.numOfCakes} </h2>
       <button onClick={props.buyCake}>Buy Cake</button>
-      <button onClick={props.refundCake}>Refund Cake</button>
+      <button className='btn btn-primary' onClick={props.refundCake}>Refund Cake</button>
     </div>
   )
 }
